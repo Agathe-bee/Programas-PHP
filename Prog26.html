@@ -1,0 +1,51 @@
+<!--Fecha: 14_10_2020-->
+<!--Autor: Fatima Azucena MC-->
+<!--fatimaAzucenamartinez274@gmail.com-->
+
+<!---->
+
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title>C A L C U L A R  S A L D O</title>
+        </head>
+  <body>
+          <form action="" id="form">
+                  <label>Inserte el numero de clientes: </label>
+                  <input type="text" name="clientes" id="clientes"/>
+                  <br/>
+                  <button type="button" onclick="sueldo();">M O S T R A R  S A L D O S</button>
+          </form>
+          <script type="text/javascript">
+                  function sueldo(){
+                     var CLIENTE = document.getElementById("clientes").value;
+                  
+                     for (var i = 1; i <= CLIENTE; i++){
+                            var nombre = prompt("Ingrese el nombre del cliente "+ i +": ");
+                            var saldoAnterior = prompt("Ingrese su saldo anterio: $");
+                            var depositoAnterior = prompt("Ingrese su ultimo deposito: ");
+                            var montoCompras = prompt("Ingrese el monto de sus compras realizadas: ");
+                            var saldoActual = prompt("Ingrese su saldo actual: ");
+                            
+                            var pagoActual = (saldoActual*0.12)+200;
+                            var pagoMinimo = (saldoActual*0.15);
+                            var pagoInteres = (saldoActual*0.85);
+
+                            alert("El pago actual de "+ nombre +" es de: "+ pagoActual +" pesos");
+                            document.write("\nEl pago minimo de "+ nombre +" es de: "+ pagoActual +" pesos");
+                            console.log("El pago para no generar intereses de "+ nombre +" es de: "+ pagoActual + " pesos");
+			   
+			    alert("El pago actual de "+ nombre +" es de: "+ pagoMinimo +" pesos");
+                            document.write("\nEl pago minimo de "+ nombre +" es de: "+ pagoMinimo +" pesos");
+                            console.log("El pago para no generar intereses de "+ nombre +" es de: "+ pagoMinimo +" pesos");
+
+                            alert("El pago actual de "+ nombre +" es de: "+ pagoMinimo +" pesos");
+                            document.write("\nEl pago minimo de "+ nombre +" es de: "+ pagoMinimo +" pesos");
+                            console.log("El pago para no generar intereses de "+ nombre +" es de: "+ pagoMinimo +" pesos");
+                     }
+
+                  }
+          </script>
+  </body>
+</html>
