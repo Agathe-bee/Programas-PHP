@@ -2,7 +2,7 @@
 <!--Autor: Fatima Azucena MC-->
 <!--fatimaAzucenamartinez274@gmail.com-->
 
-<--Un vendedor ha realizado N ventas y desea saber cuntas fueron por 10000 o menos, cuantas 
+<!--Un vendedor ha realizado N ventas y desea saber cuntas fueron por 10000 o menos, cuantas 
 fueron por ms de 10000 pero por menos de 20000, y cunto fue el monto de las ventas de cada 
 una y el monto global. Realice un algoritmo para determinar los totales-->
 <html>
@@ -54,9 +54,9 @@ una y el monto global. Realice un algoritmo para determinar los totales-->
                 }
                
         }
-        echo "Usted a realizado ".$menor." ventas menores a 10000 y el total de ellas es de: ".$sumaMenor." pesos";
-        echo "Usted a realizado ".$mayor." ventas mayores a 1000 pero menores a 20000 y la suma de estas es de ".$sumaMayor." pesos";
-        echo "El monto globla es de ".$montoGlobal." pesos";
+        echo "<br/>Usted a realizado ".$menor." ventas menores a 10000 y el total de ellas es de: ".$sumaMenor." pesos";
+        echo "<br/>Usted a realizado ".$mayor." ventas mayores a 1000 pero menores a 20000 y la suma de estas es de ".$sumaMayor." pesos";
+        echo "<br/>El monto globla es de ".$montoGlobal." pesos";
      } 
 
 ?>
