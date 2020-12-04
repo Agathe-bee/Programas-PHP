@@ -16,35 +16,43 @@ de cada trabajador. Represéntelo mediante diagrama de flujo, pseudocódigo.-->
 	</head>
 <body>
      <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-     Inserte el precio por hora: <input type="text" name="hora">
-     <br/>
-     Inserte el numero de trabajadores: <input type="text" name="trabajadores">
-     <br/>
-     <input type="submit">
+	Ingrese el costo por hora: <input type="text" name="precioHora">
+	<br/>
+	Ingrese el nombre del trabajador: <input type="text" name="nombre">
+	<br/>
+	Ingrese las horas trabajadas: <input type="text" name="hTrabajadas">
+	<br/>
+	Inserte el dinero ganado: <input  type="text" name="dineroGanado">
+	<br/>
+	<input type="submit">
+     </form>
 
  <?php
    if($_SERVER["REQUEST_METHOD"]=="POST"){
-	   $PRECIO = $_POST["hora"];
-	   $NUMERO = $_POST["trabajadores"];
-	   $nombre = " ";
-           $hTrabajadas = " ";
-	   $dineroGanado = " ";
+	   $name = $_POST["nombre"];
+	   $costoHora = $_POST["precioHora"];
+	   $horas = $_POST["hTrabajadas"];
+	   $dinero = $_POST["dineroGanado"];
+	   $sueldoNeto = 0;
+	   $sueldoBruto = 0;
 
-	   for($i = 1; $i <= $NUMERO; $i++ ){
-               echo "<br/>Inserte el nombre del trabajador: ".$nombre.": ";
- 	       echo "<br/>Inserte las horas trabajadas: ".$hTrabajadas.": ";
-	       echo "<br/>Inserte el dinero ganado: ".$dineroGanado.": ";	
-
-		       if (($dineroGanado >0)&&($dineroGanado<=150)){
-			       $sueldoBruto=40*($dineroGAnado/$hTrabajadas);
-			       $sueldoNeto=$sueldoBruto-($sueldoBruto*0.05);
-	               }else if (($dineroGanado>150)&&($dineroGanado<=300)){
-			       $sueldoBruto=40*($dineroGanado*$hTrabajadas);
-			       $sueldoNeto=$sueldoBruto-($sueldoBruto*0.07);
-		       }else if (($dineroGanado>300)&&($dineroGanado<=450)); 
-	        echo "<br/>El sueldo bruto de ".$nombre." es de: ".$sueldoBruto." pesos";
-		echo "<br/>El sueldo neto de ".$nombre." es de: ".$sueldoNeto." pesos";	
+	   if ($dinero > 0 && $dinero <= 150){
+	   	$sueldoBruto = 40*($dinero/$horas);
+		$sueldoNeto = $sueldoBruto-($sueldoBruto*0.05);
 	   }
+	   elseif ($dinero >150 && $dinero <= 300){
+	        $sueldoBruto = 40*($dinero/$horas);
+                $sueldoNeto = $sueldoBruto-($sueldoBruto*0.07);
+
+	   }
+	   elseif ($dinero >300 && $dinero <= 450){
+	        $sueldoBruto = 40*($dinero/$horas);
+                $sueldoNeto = $sueldoBruto-($sueldoBruto*0.09);
+
+	   }
+
+	   echo "<br>El sueldo bruto de ".$name." es de ".$sueldoBruto." pesos";
+	   echo "<br>El sueldo neto de ".$name." es de ".$sueldoNeto." pesos";
    }
  ?>
 </body>
