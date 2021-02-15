@@ -26,11 +26,11 @@
 		</form>
 		<?php
 			if ($_SERVER ['REQUEST_METHOD'] == "POST"){
-				$numero_1 = $_POST["valor_1"];
-				$numero_2 = $_POST["valor_2"];
-				$numero_3 = $_POST["valor_3"];
-				$numero_4 = $_POST["valor_4"];
-				$numero_5 = $_POST["valor_5"];
+				$numero_1 = $_POST['valor_1'];
+				$numero_2 = $_POST['valor_2'];
+				$numero_3 = $_POST['valor_3'];
+				$numero_4 = $_POST['valor_4'];
+				$numero_5 = $_POST['valor_5'];
 			
 				$suma = $numero_1 + $numero_2 + $numero_3 + $numero_4 + $numero_5
 

@@ -18,10 +18,10 @@
 		</form>
 		<?php
 			if ($_SERVER["REQUEST_METHOD"] == "POST"){
-				$valor = $_POST ["numero"];
+				$valor = $_POST ['numero'];
 				$numero_Factorial = 1;
 				
-				for ($i = 0; $i <= $valor; $i++){
+				for ($i = 1; $i <= $valor; $i++){
 					$numero_Factorial = $numero_Factorial * $i;
 				}	
 				echo "El factorial de ".$i." es: ".$numero_Factorial;

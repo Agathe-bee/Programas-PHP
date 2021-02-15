@@ -2,31 +2,31 @@
 <!--Autor: Fatima Azucena MC-->
 <!--fatimaaucenamatinez274@gmail.com-->
 
-<!--Solicite la edad y determine si es mayor de edad-->
+<!--Genera un programa que determine si la calificación es aprobatoria o no-->
 
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>E D A D</title>
+		<title>CALIFICACION</title>
 		<meta charset="UTF-8">
 	</head>
 	<body>
 		<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-			Digite su edad:  <input type="text" name="age">
-			<br>
+			Digite su calificacion:  <input type="text" name="promedio">
+			<br/>
 			<input type="submit">
 		</form>
 		<?php
 			if ($_SERVER["REQUEST_METHOD"] == "POST"){
-				$edad = $_POST['age'];
+				$calificacion = $_POST['promedio'];
 
-				if( $edad >= 18 ){
-					echo "Eres mayor de edad";
+				if ( $calificacion > 6){
+					echo "Tu calificacion es aprobatoria";
 				}
 				else {
-					echo "Eres menor de edad";
+					echo "Tu calificacion no es aprobatoria";
 				}
-			} 
+			}
 		?>
 	</body>
 </html>

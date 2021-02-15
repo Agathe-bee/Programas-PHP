@@ -23,39 +23,27 @@ y los ordene de mayor a menor-->
 		</form>
 		<?php
 			if ($_SERVER["REQUEST_METHOD"] == "POST"){
-				$numero_1 = $_POST["a"];
-				$numero_2 = $_POST["b"];
-				$numero_3 = $_POST["c"];
+				$numero_1 = $_POST['a'];
+				$numero_2 = $_POST['b'];
+				$numero_3 = $_POST['c'];
 
 			        if ( $numero_1 > $numero_2 && $numero_2 > $numero_3){//Inicio condicional if_else
-                			echo $numero_1;
-                			echo $numero_2;
-                			echo $numero_3;
+                			echo $numero_1." ".$numero_2." ".$numero_3;
         			}
                 			else if( $numero_1 > $numero_3 && $numero_3 > $numero_2){
-                        			echo $numero_1;
-                        			echo $numero_2;
-                        			echo $numero_3;
+                        			echo $numero_1." ".$numero_2." ".$numero_3;
                				 }
                         			else if ( $numero_2 > $numero_1 && $numero_1 > $numero_3){
-                                			echo $numero_2;
-                                			echo $numero_1;
-                                			echo $numero_3;
+                                			echo $numero_2." ".$numero_1." ".$numero_3;
                         			}
                                 			else if ( $numero_2 > $numero_3 && $numero_3 > $numero_1){
-                                        			echo $numero_2;
-                                        			echo $numero_3;
-                                        			echo $numero_1;
+                                        			echo $numero_2." ".$numero_3." ".$numero_1;
                                 			}
                                         			else if ( $numero_3 > $numero_1 && $numero_1 > $numero_2){
-                                               				echo $numero_3;
-                                                			echo $numero_1;
-                                                			echo $numero_2;
+                                               				echo $numero_3." ".$numero_1." ".$numero_2;
                                        				 }
                                                 			else if ( $numero_3 > $numero_2 && $numero_2 > $numero_1){
-                                                        			echo $numero_3;
-                                                        			echo $numero_2;
-                                                        			echo $numero_1;
+                                                        			echo $numero_3." ".$numero_2." ".$numero_1;
                                                 			}//Fin if_else
 
 			}
